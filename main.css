@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+body {
+	background-color: #000;
+	color: #000000;
+	font-family:"Times New Roman", Times, serif;
+	font-size: 150%
+}
+
+#wrapper {
+	width: 90%;
+	margin:0 auto;
+	background-image:url(../images/paper.jpg);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	background-color:white;
+	padding:5%;
+}
+
+header {
+	border-bottom: 10px #000000 inset;
+	padding:20px;
+}
+
+p{
+	width:75%;
+	margin: auto;
+	text-shadow: 1px 0px 0px #000000;
+	text-indent: 50px;
+}
+
+h1{
+	text-align:center;
+	margin: auto;
+	padding:20px;
+	text-shadow: 2px 2px 4px #000000;
+	font-size:500%;
+}
+
+h2{
+	text-shadow: 2px 2px 4px #000000;
+	text-align:center;
+	margin: auto;
+	padding:20px;
+}
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding:20px;
+	background-size: contain;
+}
+
+#wrapper footer {
+	text-align: right;
+}
+
+canvas {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(images/map.jpg);
+}
+
+
+#history {
+	border-bottom: 10px #000000 inset;
+	padding:20px;
+}
+#canvasdiv{
+	padding:50px;
+}
+
+#credit{
+	text-align:center;
+	font-size:75%;
+}
+a {
+	color: red;
+}
+
+.start {
+	font-weight: bold;
+	text-shadow: 2px 2px 6px #000000;
+	font-family:"Times New Roman", Times, serif;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+	margin-bottom: 10px;
+	background: rgba(170, 0,0, 0.5);
+
+	padding: 16px 32px;
+	color:white;
+	border:2px solid rgba(170, 0, 0, 0.25);
+	transition-duration: 0.4s;
+	font-size: 16px;
+	cursor: pointer;
+	outline:0;
+	
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.start:hover {
+	background: rgba(170, 0,0, 0.75);
+}
+
+.start:active {
+  background: rgba(170, 0,0, 1);
+  transform: scale(1.25, 1.25);
+}
