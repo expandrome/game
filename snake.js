@@ -131,7 +131,8 @@ ctx.drawImage(document.getElementById("soldier"),x * cw, y * cw, cw, cw)
 }
 function paint_foodcell(x,y){
 ctx.drawImage(document.getElementById("castle"),x * cw, y * cw, cw, cw)
-}
+}
+
 function check_collision(x,y, array){
 for(var i = 0; i<array.length; i++){
 if(array[i].x == x && array[i].y == y)
@@ -156,6 +157,32 @@ $(document).keydown(function(e){
 	}
 
 });
+$("#canvas").on("swipeleft",function(event){
+	if(d != "right" && currentlyPlaying == true){
+		d="left";
+		e.preventDefault();
+	}
+});
 
+$("#canvas").on("swiperight",function(event){
+	if(d != "left" && currentlyPlaying == true){
+		d="right";
+		e.preventDefault();
+	}
+});
+
+$("#canvas").on("swipeup",function(event){
+	if(d != "down" && currentlyPlaying == true){
+		d="up";
+		e.preventDefault();
+	}
+});
+
+$("#canvas").on("swipedown",function(event){
+	if(d != "up" && currentlyPlaying == true){
+		d="down"
+		e.preventDefault();
+	}
+});
 init();
-});
+});
