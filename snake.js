@@ -7,7 +7,7 @@ var h = $("#canvas").height();
 //variables for the game
 var score = 0;
 var food;
-var cw = 50;
+var cw = 20;
 var d = "right";
 var currentlyPlaying = true
 $('.start').on('click', function(){
@@ -24,7 +24,7 @@ create_snake();
 d = "right";
 if(typeof game_loop != "undefined")
 clearInterval(game_loop);
-var move_time = 100;
+var move_time = 75;
 game_loop = setInterval(paint, move_time);
 }
 
@@ -36,11 +36,11 @@ function stop(){
 	
 	ctx.font ="bold 50px Times New Roman";
 	var highscore_text = "HIGHSCORE: " + localStorage.getItem("highscore");
-	ctx.fillText(highscore_text,350, 250);
+	ctx.fillText(highscore_text,200, 250);
 
 	ctx.font ="bold 50px Times New Roman";
 	var score_text = "SCORE: " + score;
-	ctx.fillText(score_text,400, 350);
+	ctx.fillText(score_text,250, 350);
 	
 	
         clearInterval(game_loop);
@@ -155,34 +155,7 @@ $(document).keydown(function(e){
 		d="down"
 		e.preventDefault();
 	}
-
-});
-$("#canvas").on("swipeleft",function(event){
-	if(d != "right" && currentlyPlaying == true){
-		d="left";
-		e.preventDefault();
-	}
 });
 
-$("#canvas").on("swiperight",function(event){
-	if(d != "left" && currentlyPlaying == true){
-		d="right";
-		e.preventDefault();
-	}
-});
-
-$("#canvas").on("swipeup",function(event){
-	if(d != "down" && currentlyPlaying == true){
-		d="up";
-		e.preventDefault();
-	}
-});
-
-$("#canvas").on("swipedown",function(event){
-	if(d != "up" && currentlyPlaying == true){
-		d="down"
-		e.preventDefault();
-	}
-});
 init();
 });
