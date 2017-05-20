@@ -27,7 +27,7 @@ clearInterval(game_loop);
 var move_time = 100;
 game_loop = setInterval(paint, move_time);
 }
-
+//y
 function stop(){
 	currentlyPlaying = false
 	ctx.drawImage(document.getElementById("lose"), 0, 0,w,h)
