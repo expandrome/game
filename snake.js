@@ -7,7 +7,7 @@ var h = $("#canvas").height();
 //variables for the game
 var score = 0;
 var food;
-var cw = 20;
+var cw = 40;
 var d = "right";
 var currentlyPlaying = true
 $('.start').on('click', function(){
@@ -24,7 +24,7 @@ create_snake();
 d = "right";
 if(typeof game_loop != "undefined")
 clearInterval(game_loop);
-var move_time = 75;
+var move_time = 100;
 game_loop = setInterval(paint, move_time);
 }
 
